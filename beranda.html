@@ -3,75 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALVÉ - Beranda</title>
+    <title>Toko Online Kita - Beranda</title>
+    <!-- Menghubungkan ke file CSS gabungan/utama -->
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome untuk Icon (Opsional) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-
 <body>
 
+    <!-- NAVBAR (Navigasi Utama) -->
     <header>
-        <nav>
-            <div class="logo">ALVÉ</div>
-
-            <ul>
-                <li><a href="beranda.html" class="active">Beranda</a></li>
-                <li><a href="produk.html">Produk</a></li>
-                <li><a href="kontak.html">Kontak</a></li>
-            </ul>
-        </nav>
+        <div class="navbar container">
+            <div class="logo">Toko<span>Kita</span></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Beranda</a></li>
+                    <li><a href="produk.html">Produk</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
+    <!-- HERO SECTION (Banner Utama Beranda) -->
+    <section class="hero">
+        <div class="hero-content container">
+            <h1>Selamat Datang di TokoKita</h1>
+            <p>Temukan produk-produk terbaik dan berkualitas tinggi hanya untuk Anda dengan harga terjangkau.</p>
+            <a href="produk.html" class="btn">Belanja Sekarang</a>
+        </div>
+    </section>
 
-    <main>
+    <!-- FITUR KEUNGGULAN (Keuntungan Belanja) -->
+    <section class="features container">
+        <div class="feature-box">
+            <i class="fas fa-truck"></i>
+            <h3>Pengiriman Cepat</h3>
+            <p>Pesanan dikirim langsung ke rumah Anda dengan aman dan cepat.</p>
+        </div>
+        <div class="feature-box">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Kualitas Terjamin</h3>
+            <p>Produk original dengan garansi kualitas terbaik.</p>
+        </div>
+        <div class="feature-box">
+            <i class="fas fa-headset"></i>
+            <h3>Layanan 24/7</h3>
+            <p>Dukungan pelanggan siap membantu Anda kapan saja.</p>
+        </div>
+    </section>
 
-        <section class="hero">
-            <div class="hero-text">
-                <p class="small-text">EST. 2026</p>
-
-                <h1>Elegance in<br>Every Detail</h1>
-
-                <p>
-                    Temukan pilihan fashion sederhana dengan
-                    gaya klasik yang cocok digunakan sehari-hari.
-                </p>
-
-                <a href="produk.html" class="button">
-                    Lihat Produk
-                </a>
-            </div>
-        </section>
-
-
-        <section class="about">
-            <div class="about-image">
-                <img src="shop.jpg" alt="Toko ALVÉ">
-            </div>
-
-            <div class="about-text">
-                <p class="small-text">TENTANG ALVÉ</p>
-
-                <h2>Simple, Classic,<br>and Comfortable.</h2>
-
-                <p>
-                    ALVÉ merupakan toko fashion yang menyediakan
-                    berbagai produk untuk melengkapi gaya sehari-hari.
-                    Kami mengutamakan desain yang sederhana, nyaman,
-                    dan tetap terlihat elegan.
-                </p>
-
-                <p>
-                    Setiap produk dipilih dengan memperhatikan
-                    kualitas dan kemudahan untuk digunakan.
-                </p>
-            </div>
-        </section>
-
-    </main>
-
-
+    <!-- FOOTER -->
     <footer>
-        <p>© 2026 ALVÉ. All Rights Reserved.</p>
+        <div class="container footer-content">
+            <p>&copy; 2026 TokoKita. Tugas Kelompok Web Development.</p>
+        </div>
     </footer>
 
 </body>
-</html>>
+</html>
