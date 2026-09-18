@@ -92,7 +92,7 @@ footer {
    =================================================== */
 /* HERO SECTION */
 .hero {
-    background: linear-gradient(rgba(76, 51, 21, 0.529), rgba(0, 0, 0, 0.6)), url('gambar.jpg');
+    background: linear-gradient(rgba(199, 183, 183, 0.529), rgba(0, 0, 0, 0.6)), url('gambar.jpg');
     height: 60vh;
     display: flex;
     align-items: center;
