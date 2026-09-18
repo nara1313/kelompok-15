@@ -9,8 +9,8 @@
 }
 
 :root {
-    --primary-color: #2b580c;    /* Warna hijau utama */
-    --accent-color: #639a67;     /* Warna aksen */
+    --primary-color: #412a17;    /* Warna hijau utama */
+    --accent-color: #b2a789;     /* Warna aksen */
     --text-color: #333333;       /* Warna teks */
     --bg-light: #f9f9f9;         /* Latar belakang terang */
     --white: #ffffff;
@@ -92,13 +92,11 @@ footer {
    =================================================== */
 /* HERO SECTION */
 .hero {
-    background: linear-gradient(rgba(43, 88, 12, 0.8), rgba(0, 0, 0, 0.6)), 
-                url('https://picsum.photos/1200/500') no-repeat center center/cover;
+    background: linear-gradient(rgba(76, 51, 21, 0.529), rgba(0, 0, 0, 0.6)), url('gambar.jpg');
     height: 60vh;
     display: flex;
     align-items: center;
     text-align: center;
-    color: var(--white);
 }
 
 .hero-content h1 {
