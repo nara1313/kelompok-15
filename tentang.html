@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALVÉ - Tentang Kami</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ===== Style khusus halaman Tentang Kami ===== */
+        /* Terinspirasi dari biodatainteraktif.html: efek typing, kartu kaca (glassmorphism), animasi fade-in */
+
+        .about-hero {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(-45deg, #141E30, #243B55);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 20px;
+        }
+
+        .about-card {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            width: 100%;
+            max-width: 700px;
+            backdrop-filter: blur(10px);
+            margin: 20px auto;
+        }
+
+        .about-logo {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        /* Efek Typing */
+        .typing {
+            font-size: 26px;
+            font-weight: bold;
+            color: #00E5FF;
+            text-shadow: 0 0 10px #00E5FF;
+            border-right: 3px solid #00E5FF;
+            white-space: nowrap;
+            overflow: hidden;
+            display: inline-block;
+            min-height: 36px;
+        }
+
+        /* Isi profil toko */
+        .company-info {
+            text-align: left;
+            margin-top: 25px;
+            font-size: 17px;
+        }
+
+        .company-info h2 {
+            color: #00E5FF;
+            border-bottom: 2px solid #00E5FF;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .company-info p, .company-info li {
+            margin: 6px 0;
+            line-height: 1.6;
+            color: #eaeaea;
+        }
+
+        .company-info ul {
+            padding-left: 20px;
+        }
+
+        /* Animasi fade in */
+        .animate {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .about-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 26px;
+            background: #00E5FF;
+            color: #141E30;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: 0.2s ease;
+        }
+
+        .about-button:hover {
+            background: #33ecff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <div class="logo">
+            🛍️ <span>ALVÉ</span>
+        </div>
+
+        <div class="menu">
+            <a href="beranda.html">Beranda</a>
+            <a href="produk.html">Produk</a>
+            <a href="tentang.html" class="active">Tentang Kami</a>
+            <a href="kontak.html">Kontak</a>
+        </div>
+
+        <div class="icons">
+            🔍 🛒
+        </div>
+
+    </nav>
+
+
+    <!-- TENTANG KAMI - HERO INTERAKTIF -->
+    <section class="about-hero">
+        <div class="about-card">
+
+            <div class="about-logo">🛍️</div>
+            <h1 class="typing" id="typing-text"></h1>
+
+            <div class="company-info">
+
+                <h2 class="animate">Profil ALVÉ</h2>
+                <p class="animate"><strong>Nama Toko:</strong> ALVÉ</p>
+                <p class="animate"><strong>Didirikan:</strong> 2026</p>
+                <p class="animate"><strong>Lokasi:</strong> Jakarta, Indonesia</p>
+                <p class="animate"><strong>Email:</strong> <a href="mailto:halo@alve.com" style="color:#00E5FF;">halo@alve.com</a></p>
+
+                <h2 class="animate">Cerita Kami</h2>
+                <p class="animate">
+                    ALVÉ berawal dari keinginan sederhana untuk membuat belanja
+                    online terasa lebih mudah dan menyenangkan. Kami percaya
+                    setiap orang berhak mendapatkan produk berkualitas dengan
+                    harga yang bersahabat, tanpa ribet.
+                </p>
+
+                <h2 class="animate">Visi</h2>
+                <p class="animate">
+                    Menjadi tempat belanja online pilihan utama yang dipercaya
+                    karena kualitas, pelayanan, dan kemudahannya.
+                </p>
+
+                <h2 class="animate">Misi</h2>
+                <ul class="animate">
+                    <li>Menyediakan produk berkualitas dengan harga bersahabat</li>
+                    <li>Memberikan pelayanan yang cepat dan ramah</li>
+                    <li>Menjaga kepercayaan pelanggan di setiap transaksi</li>
+                </ul>
+
+                <h2 class="animate">Kenapa Pilih ALVÉ?</h2>
+                <ul class="animate">
+                    <li>✔️ Produk berkualitas & terkurasi</li>
+                    <li>✔️ Harga bersahabat</li>
+                    <li>✔️ Respon cepat & pelayanan ramah</li>
+                </ul>
+
+                <a href="produk.html" class="about-button animate">Lihat Produk Kami&nbsp; →</a>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <footer>
+        <p>© 2026 ALVÉ. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Efek Typing Berulang
+        const text = " Halo, Selamat Datang di ALVÉ!";
+        let index = 0;
+        let isDeleting = false;
+        let speed = 100;
+
+        function typeEffect() {
+            let typingElement = document.getElementById("typing-text");
+
+            if (!isDeleting) {
+                typingElement.textContent = text.substring(0, index);
+                index++;
+                if (index > text.length) {
+                    isDeleting = true;
+                    setTimeout(typeEffect, 1500);
+                    return;
+                }
+            } else {
+                typingElement.textContent = text.substring(0, index);
+                index--;
+                if (index === 0) {
+                    isDeleting = false;
+                }
+            }
+
+            setTimeout(typeEffect, isDeleting ? 50 : speed);
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            setTimeout(typeEffect, 500);
+
+            const elements = document.querySelectorAll('.animate');
+            elements.forEach((el, index) => {
+                setTimeout(() => {
+                    el.classList.add('visible');
+                }, 300 * (index + 1));
+            });
+        });
+    </script>
+
+</body>
+</html>
